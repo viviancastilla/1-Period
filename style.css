@@ -1,0 +1,102 @@
+body{
+    background-color: darkgray;
+    top: 10;
+    /* text-align: right ; */
+    color: white;
+    font-family:fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: -1;
+}
+
+.form-container {
+    flex: 1;
+    padding: 50px;
+    min-width: 300px;
+    margin-left: 5%;
+}
+
+.positioned-image{
+    width: 60vw;
+    height: 50vw;
+    position: absolute;
+    left: 0;
+}
+
+.price-banner{
+    position: fixed;
+    border-radius: 50%;
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    left: 10px;
+    top: 10px;
+}
+
+h3{
+    margin-top: 15px;
+}
+
+input[type="checkbox"]{
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+select,
+label{
+    display:block;
+    margin-top: 10px;
+}
+
+:placeholder-shown{
+    border-radius: 5px;
+}
+
+select, button{
+    border-color: pink;
+    color: white;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+
+.topping:checked{
+    border-color: pink;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+.delivery:checked{
+    background-color: pink;
+}

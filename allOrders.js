@@ -1,0 +1,43 @@
+document.addEventListener("DOMContentLoaded", function(){
+    let storedOrders = localStorage.getItem("orders");
+    let ordersContainer = document.getElementById("orders-list");
+    let orderTemplate = document.getElementById("orderTemplate");
+    let noOrdersMessage = document.getElementById("noOrders");
+
+    if(!orderTemplate) return;
+
+    if(storedOrders){
+        let orders = JSON.parse(storedOrders);
+
+        ordersContainer.innerHTML = "";
+
+        if(orders.length > 0){
+            noOrdersMessage.style.display = "none";
+
+            orders.forEach((order, index) => {
+                let orderClone = orderTemplate.cloneNode(true);
+                orderClone.style.display = "block";
+                orderClone.removeAttribute("id");
+
+                orderClone.querySelector(".orderId")?.textContent = `Order #${index + 1}`;
+                orderClone.querySelector("#customerName")?.textContent = `Name: ${order.customerName || "unknown"}`;
+                orderClone.querySelector("#pancake")?.textContent = `Pancake: ${order.pancake || order.selectedPancake || "none"}`;
+                orderClone.querySelector("#toppings")?.textContent = `Toppings: ${order.toppings?.join(", ") || "none"}`;
+                orderClone.querySelector("#extras").textContent = `Extras: ${order.extras?.join(", ") || "none"}`;
+                orderClone.querySelector("#delivery")?.textContent = `Delivery: ${order.deliveryMethod || "not specified"}`;
+                orderClone.querySelector("#totalPrice")?.textContent = `Total price: ${order.totalPrice || "N/A"}`;
+
+                ordersContainer.appendChild(orderClone);
+            });
+        }else{
+            noOrdersMessage.style.display = "block";
+        }
+    }else{
+        noOrdersMessage.style.display = "block";
+    }
+});
+
+
+
+
+//Status color option
