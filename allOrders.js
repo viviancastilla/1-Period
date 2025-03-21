@@ -1,9 +1,12 @@
+// All orders page
+
 document.addEventListener("DOMContentLoaded", function(){
     let storedOrders = localStorage.getItem("orders");
     let ordersContainer = document.getElementById("order-list");
     let orderTemplate = document.getElementById("orderTemplate");
     let noOrdersMessage = document.getElementById("noOrders");
 
+    //Getting the orders from the local storage
     if (!orderTemplate) return;
 
     if (storedOrders) {
@@ -13,14 +16,15 @@ document.addEventListener("DOMContentLoaded", function(){
         ordersContainer.innerHTML = "";
 
         if (orders.length > 0) {
-            noOrdersMessage.style.display = "none";
+            noOrdersMessage.classList.add("hidden");
 
             orders.forEach((order, index) => {
                 let orderClone = orderTemplate.cloneNode(true);
-                orderClone.style.display = "block";
+                orderClone.classList.add("orderVisible");
                 orderClone.removeAttribute("id");
 
-                let orderIdElement = orderClone.querySelector(".orderId");
+                //Give a number ID to the order
+                let orderIdElement = orderClone.querySelector("#orderId");
                 console.log(`Order #${index + 1}:`, orderIdElement);
 
                 if (orderIdElement) {
@@ -30,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 console.log(`Order Data #${index + 1}:`, order);
 
+                //Getting each ordes details
                 orderClone.querySelector("#customerName").textContent = `Name: ${order.customerName || "unknown"}`;
                 orderClone.querySelector("#pancake").textContent = `Pancake: ${order.pancake || order.selectedPancake || "none"}`;
                 orderClone.querySelector("#toppings").textContent = `Toppings: ${order.toppings?.join(", ") || "none"}`;
@@ -40,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 ordersContainer.appendChild(orderClone);
             });
         } else {
-            noOrdersMessage.style.display = "block";
+            noOrdersMessage.classList.remove("hidden");
         }
     } else {
-        noOrdersMessage.style.display = "block";
+        noOrdersMessage.classList.remove("hidden");
     }
 });
 

@@ -43,48 +43,15 @@ h1{
     position: relative;
     width: 200px;
 }
-.selectBox{
-    padding: 10px;
-    background-color: white;
-    display: flex;
-    justify-content:space-between;
-    align-items: center; 
-}
 
-.selectBox i{
-    border: solid 5px transparent;
-    border-top-color:red;
-}
-
-.options{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    top: 100%;
-    left: 0;
+#orderTemplate{
     display: none;
-    z-index: 10;
 }
 
-.option{
-    padding: 10px;
-    cursor: pointer;
+.hidden{
+    display: none;
 }
 
-.selectStatus.open .options{
+.orderVisible{
     display: block;
-}
-
-.selectBox.waiting{
-    background-color: yellow;
-}
-.selectBox.ready{
-    background-color: blue;
-}
-.selectBox.delivered{
-    background-color: green;
 }
