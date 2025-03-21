@@ -1,7 +1,7 @@
 body{
     background-color: darkgray;
     top: 10;
-    /* text-align: right ; */
+
     color: white;
     font-family:fantasy;
     display: flex;
@@ -99,4 +99,8 @@ select, button{
 
 .delivery:checked{
     background-color: pink;
+}
+
+button .allOrders{
+    width: 200px;
 }

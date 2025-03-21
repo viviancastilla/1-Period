@@ -148,7 +148,6 @@ document.getElementById("seeOrder").addEventListener("click", function(){
 
     addOrder(orderDetails);
 
-    //displayOrder();
 });  
 
 //Button to go to the allorders.html page

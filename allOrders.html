@@ -20,22 +20,20 @@
                     <div id="totalPrice">Total price:</div><br>
 
                     <div class="selectStatus">
-                        <div class="selectBox"></div>
-                            <span>Status: Waiting</span>
+                        <span class="statusLabel"><p>Status:</p></span>
+                        <select class="statusDropdown">
+                            <option value="waiting">Waiting</option>
+                            <option value="ready">Ready</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
                     </div>
-                    <ul class="options">
-                        <li class="option" data-value="waiting">Waiting</li>
-                        <li class="option" data-value="ready">Ready</li>
-                        <li class="option" data-value="delivered">Delivered</li>
-                    </ul>
+                    
                 </div>
             </div><br>
         </div>
     </div>
 
     <div id="noOrders" class="hidden"> No orders at the moment</div>
-
-    <button type="button" id="allOrders">View all orders</button>
 
     <script src="allOrders.js" ></script>
 </body>
