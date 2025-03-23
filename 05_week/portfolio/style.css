@@ -1,0 +1,336 @@
+/*Overall details*/
+body{
+    background-color: lightblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Top bar*/
+.topBar{
+    background-color: aliceblue;
+    color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    top: 0px;
+    left: 0;
+    padding: 0px 100px;
+    z-index: 1000;
+}
+
+.topBar nav ul{
+    margin-left: auto;
+    padding-right: 150px;
+}
+
+.topBar nav ul li{
+    display: inline-block ;
+    margin-right: 20px;
+}
+
+.topBar nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.topBar ul li a:hover{
+    color: #004A76;
+}
+
+.topBar li{
+    margin: 0px;
+}
+
+
+/*Main section*/
+main{
+    padding-top: 10;
+    flex-grow: 1;
+}
+
+
+/*About section*/
+#about{
+    padding: 50px;
+    text-align: center;
+}
+#about .about-text h2{
+    margin-top: -150px;
+    text-align: left;
+    font-size: 35px;
+}
+#about .about-text p{
+    font-size: 18px;
+    text-align: justify;
+}
+.image-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-right: 10px;
+    gap: 200px;
+}
+.image-container img{
+    max-width: 500px;
+    height: auto;
+    margin-top: -150px;
+}
+
+
+/*Education section */
+#education{
+    background-color: rgb(214, 182, 243);
+}
+#education h2{
+    text-align: left;
+    font-size: 40px;
+    margin-top: -20px;
+}
+#education .education-container{
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 90px;
+    position: relative;
+    top: -20px;
+}
+#education .education-container div{
+    background-color: white;
+    color: black;
+    padding: 15px 15px;
+    border-radius: 3px;
+    text-align: center;
+    width: 200px;
+    height: 5px;
+    position: relative;
+    top: -70px;
+}
+#education .education-container p{
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+#education .JavaScript{
+    background: linear-gradient(to right, grey 60%, white 40%);
+}
+#education .CSS{
+    background: linear-gradient(to right, grey 60%, white 40%);
+}
+#education .HTML{
+    background: linear-gradient(to right, grey 50%, white 50%);
+}
+#education .UIandPrototyping{
+    background: linear-gradient(to right, grey 80%, white 20%);
+}
+
+
+/*Projects section */
+.project{
+    width:180px;
+    height:180px;
+    background:white;
+    color:black;
+    margin:30px;
+    margin-top: -180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+#projects h2{
+    font-size: 45px;
+    margin-top: -10px;
+}
+#projects .projects-container{
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*Skills area*/
+#skills{
+    background-color: rgb(214, 182, 243);
+    padding: 70px;
+}
+#skills h2{
+    font-size: 40px;
+    text-align: left;
+    position: relative;
+    top: -100px;
+    margin-bottom: 0;
+}
+#skills .container{
+    text-align:start;
+}
+#skills p{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*Back to top button*/
+.backToTop{
+    width: 150px;
+    height: 40px;
+    position: fixed;
+    bottom: 3rem;
+    right: 0rem;
+    display: block;
+    background-color: rgb(205, 205, 205);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: rgb(205, 205, 205);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/*Overlay*/
+.overlay{
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 2rem;
+    right: 2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.modal{
+    background-color: aliceblue;
+    height: 60vh;
+    width: 60vh;
+    padding: 2rem;
+    position: relative;
+    color: black;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+.overlay button{
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 50px;
+    background: transparent;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* Contact*/
+#contact .container {
+    height: 480px;
+    width: 300px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+input{
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+}
+#contact .container div{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#contact p{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 
+}
+
+/* Bottom bar */
+.bottomBar{
+    background-color: aliceblue;
+    color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    padding: 0px 50px;
+    margin-top: auto;
+    z-index: 100;
+}
+
+.bottomBar nav ul{
+    margin-left: auto;
+    padding-right: 150px;
+}
+
+.bottomBar nav ul li{
+    display: inline-block ;
+    margin-right: 20px;
+}
+
+.bottomBar nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.bottomBar ul li a:hover{
+    color: #004A76;
+}
+
+.bottomBar ul li{
+    margin: 0px;
+}
+
+/*For media*/
+@media (max-width: 375px){
+    body{
+        padding-top: 50;
+    }
+
+    .topBar{
+        padding: 8px 20px;
+    }
+}
