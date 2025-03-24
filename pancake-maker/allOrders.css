@@ -1,0 +1,75 @@
+body{
+    background-color: darkgray;
+    color: white;
+    font-family:fantasy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    position: relative;
+    top: 30px;
+}
+#ordersContainer{
+    position: relative;
+    top: 10px;
+    height: 500px;
+    width: 300px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 50px;
+    text-align: left;
+}
+
+#orderTemplate{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.orderVisible{
+    display: block;
+    margin-bottom: 80px;
+    padding: 10px;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 5px;
+    background-color: rgb(56, 72, 144);;
+}
+
+.statusDropdown{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.selectStatus{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.statusLabel{
+    margin-left: 10px;
+}
+
+.statusWaiting .statusDropdown{
+    background-color: rgb(248, 248, 86);
+}
+
+.statusReady .statusDropdown{
+    background-color: rgb(42, 101, 249);
+}
+
+.statusDelivered .statusDropdown{
+    background-color: green;
+}
+
+#noOrders{
+    position: fixed;
+    top: 10px;
+    left: 50%;
+}

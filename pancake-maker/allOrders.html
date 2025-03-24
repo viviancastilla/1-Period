@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All orders</title>
+    <link rel="stylesheet" href="allOrders.css">
+</head>
+<body>
+    <h1>All orders</h1>
+    <div id="ordersContainer">
+        <div id="order-list">
+                <div class="orderItem" id="orderTemplate" >
+                    <div id="orderId">Order #</div><br>
+                    <div id="customerName">Name:</div><br>
+                    <div id="pancake">Pancake:</div><br>
+                    <div id="toppings">Toppings:</div><br>
+                    <div id="extras">Extras:</div><br>
+                    <div id="delivery">Delivery:</div><br>
+                    <div id="totalPrice">Total price:</div><br>
+
+                    <div class="selectStatus">
+                        <span class="statusLabel"><p>Status:</p></span>
+                        <select class="statusDropdown">
+                            <option value="waiting">Waiting</option>
+                            <option value="ready">Ready</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div><br>
+        </div>
+    </div>
+
+    <div id="noOrders" class="hidden"> No orders at the moment</div>
+
+    <script src="allOrders.js" ></script>
+</body>
+</html>

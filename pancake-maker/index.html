@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="pancake.jpeg" alt="Delicious pancakes" class="positioned-image">
+            <div class="price-banner"><span id="totalPriceDisplay">5€</span></div>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+    <h2> Customize your Pancake</h2>
+
+    <form id="pancakeForm">
+        <!--Customer Name-->
+        <div>
+            <label for="customerName">Your Name:</label>
+        <input type="text" id="customerName" placeholder="Enter your name" />
+        </div>
+        
+
+        <!--Making the Pancake-->
+            <label for="type">Choose your pancake type:</label>
+                <select id="type">
+                    <option data-price="5">Classic - 5€</option>
+                    <option data-price="6">Chocolate - 6€</option>
+                    <option data-price="7">Blueberry -7€</option>
+                </select>
+    
+        <!-- Toppings -->
+         <h3>Select your toppings (1€ each):</h3>
+         <div>
+            <label><input type="checkbox" class="topping" value="Nuts" data-price="1" /> Nuts</label>
+        </div>
+         
+        <div>
+            <label><input type="checkbox" class="topping" value="Bananas" data-price="1" /> Bananas</label>
+        </div>
+
+        <div>
+            <label><input type="checkbox" class="topping" value="Syrup" data-price="1" /> Syrup</label>
+        </div>
+
+        <!-- Extras -->
+         <h3>Add extras:</h3>
+         <div>
+            <label><input type="checkbox" class="extra" value="Whipped Cream" data-price="2" /> Whipped Cream - 2€</label>
+        </div>
+         
+        <div>
+            <label><input type="checkbox" class="extra" value="Ice Cream" data-price="1" /> Ice Cream - 3€</label>
+        </div>
+
+        <!-- Delivery Method -->
+         <h3>Choose delivery method:</h3>
+         <div>
+            <label>
+                <input 
+                    type="radio" 
+                    name="delivery" 
+                    class="delivery"
+                    value="Eat in" 
+                    data-price="0" 
+                    checked/>
+                    Eat In
+                </label>
+        </div>
+         
+            <label>
+                <input 
+                    type="radio" 
+                    name="delivery" 
+                    class="delivery"
+                    value="Pick up" 
+                    data-price="0" />
+                    Pick up
+                </label>
+        <div>
+            <label>
+                <input 
+                    type="radio" 
+                    name="delivery" 
+                    class="delivery" 
+                    value="Delivered"
+                    data-price="5" />
+                    Delivery(+5€)
+            </label>
+        </div><br>
+
+          
+          <!-- See Order Button -->
+           <button type="button" id="seeOrder">See Order</button>
+           
+            <!-- Submit button-->
+           <button type="button" id="submit">Submit</button><br>
+    </form>
+
+        <!-- Order Summary Display -->
+        <div id="orderSummary">
+            <h3>Order Summary</h3>
+            <p id="summaryText">Your order details will appear here.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<button type="button" id="allOrders">All orders</button>
+<script src="main.js" ></script>
+
+</body>
+</html>
